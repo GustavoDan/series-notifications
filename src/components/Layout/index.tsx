@@ -11,7 +11,7 @@ export function Layout({ children }: LayoutProps) {
     return (
         <Flex direction="column" height="100vh">
             <Navbar />
-            <main style={{ flexGrow: 1 }}>{children}</main>
+            <main>{children}</main>
         </Flex>
     );
 }

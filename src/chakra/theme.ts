@@ -20,11 +20,29 @@ export const theme = extendTheme({
     styles: {
         global: () => ({
             body: {
-                bg: "gray.200",
-                width: "100vw",
+                bg: "gray.800",
+                color: "gray.100",
+                maxW: "100vw",
+            },
+            main: {
+                flexGrow: 1,
+                padding: 4,
             },
             button: {
                 WebkitTapHighlightColor: "transparent",
+            },
+            ".swiper": {
+                maxW: "100%",
+                userSelect: "none",
+                zIndex: 0,
+            },
+            ".swiper-slide": {
+                width: "100%",
+                textAlign: "center",
+                fontSize: "18px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
             },
         }),
     },

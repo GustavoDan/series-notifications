@@ -2,5 +2,8 @@
     "language_name": "Português",
     "user_menu_header": "Olá, anônimo",
     "sign_in": "Entrar",
-    "sign_up": "Registrar"
+    "sign_up": "Registrar",
+    "popular_series": "Series populares",
+    "top_rated_series": "Series melhores avaliadas",
+    "on_air_series": "Series passando agora"
 }

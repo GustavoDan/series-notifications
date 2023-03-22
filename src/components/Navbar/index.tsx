@@ -6,7 +6,7 @@ import { UserMenu } from "./UserMenu";
 export function Navbar() {
     return (
         <Flex
-            width="100vw"
+            width="100%"
             alignItems="center"
             justifyContent="space-between"
             bg="black"

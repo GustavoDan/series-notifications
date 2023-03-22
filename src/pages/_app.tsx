@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { appWithTranslation } from "next-i18next";
 
 import { theme } from "@/chakra/theme";
-import { Layout } from "@/Component/Layout";
+import { Layout } from "@/components/Layout";
 
 function App({ Component, pageProps }: AppProps) {
     return (
