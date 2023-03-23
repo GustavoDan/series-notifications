@@ -20,6 +20,7 @@ export const theme = extendTheme({
     styles: {
         global: () => ({
             body: {
+                "--swiper-navigation-color": "gray.300",
                 bg: "gray.800",
                 color: "gray.100",
                 maxW: "100vw",

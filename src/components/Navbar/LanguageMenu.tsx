@@ -24,7 +24,7 @@ export function LanguageMenu(props: MenuButtonProps) {
     return (
         <Menu variant="darkgray">
             <MenuButton as={Text} textTransform="uppercase" {...props}>
-                {locale}
+                {locale?.split("-")[0]}
             </MenuButton>
 
             <MenuList>
