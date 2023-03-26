@@ -16,9 +16,10 @@ export function LanguageMenu(props: MenuButtonProps) {
     const { t } = useTranslation();
     const { locale, locales, ...router } = useRouter();
 
-    const onToggleLanguageClick = (newLocale: string) => {
+    const onToggleLanguageClick = async (newLocale: string) => {
         const { pathname, asPath, query } = router;
-        router.push({ pathname, query }, asPath, { locale: newLocale });
+        await router.push({ pathname, query }, asPath, { locale: newLocale });
+        router.reload();
     };
 
     return (
