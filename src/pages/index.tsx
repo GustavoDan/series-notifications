@@ -2,11 +2,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Flex } from "@chakra-ui/react";
 
 import { SeriesSwiper } from "@/components/SeriesSwiper";
-
-interface i18nProps {
-    locales: string[];
-    locale: string;
-}
+import { i18nProps } from "@/types";
 
 export default function Home() {
     return (

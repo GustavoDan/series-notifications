@@ -3,11 +3,9 @@ import {
     MenuButton,
     Text,
     MenuList,
-    MenuItem,
     MenuButtonProps,
     MenuItemOption,
     MenuOptionGroup,
-    Flex,
 } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";

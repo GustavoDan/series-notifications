@@ -1,11 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios";
+import { getListFromTmdb } from "@/components/services/getFromTmdb";
 
 const all_monetization_types = "flatrate|free|ads|rent|buy";
-
-const getFromTmdb = async (requestString: string) => {
-    return await axios.get(requestString).then((res) => res.data.results);
-};
 
 export default async function listSeries(
     req: NextApiRequest,
@@ -25,7 +21,7 @@ export default async function listSeries(
         res.status(404).send("Invalid listing parameter");
 
     try {
-        res.status(200).json(await getFromTmdb(types[listingParam]));
+        res.status(200).json(await getListFromTmdb(types[listingParam]));
     } catch (error: any) {
         res.status(400).send(error.message);
     }
