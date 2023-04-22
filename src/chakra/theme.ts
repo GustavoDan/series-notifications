@@ -25,10 +25,6 @@ export const theme = extendTheme({
                 color: "gray.100",
                 maxW: "100vw",
             },
-            main: {
-                flexGrow: 1,
-                padding: 4,
-            },
             button: {
                 WebkitTapHighlightColor: "transparent",
             },

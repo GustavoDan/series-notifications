@@ -2,5 +2,6 @@
     "popular_series_region": "Popular series in the US",
     "popular_series_world": "Popular series worldwide",
     "top_rated_series": "Top Rated Series",
-    "on_air_series": "Series airing now"
+    "on_air_series": "Series airing now",
+    "no_series_loaded": "It wasn't possible to load the series data.\nPlease reload the page or click here to try again.\nIf the problem persists, wait a few minutes."
 }

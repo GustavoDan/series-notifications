@@ -2,5 +2,6 @@
     "popular_series_region": "Series populares no brasil",
     "popular_series_world": "Series populares no mundo",
     "top_rated_series": "Series melhores avaliadas",
-    "on_air_series": "Series passando agora"
+    "on_air_series": "Series passando agora",
+    "no_series_loaded": "Nenhuma série pôde ser carregada.\nPor favor, recarregue a página ou clique aqui para tentar carregar novamente.\nSe o problema persistir, aguarde alguns minutos e tente novamente."
 }

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Flex } from "@chakra-ui/react";
+import { chakra, Flex } from "@chakra-ui/react";
 
 import { Navbar } from "../Navbar";
 
@@ -11,7 +11,9 @@ export function Layout({ children }: LayoutProps) {
     return (
         <Flex direction="column" height="100vh">
             <Navbar />
-            <main>{children}</main>
+            <chakra.main flexGrow={1} padding={4}>
+                {children}
+            </chakra.main>
         </Flex>
     );
 }

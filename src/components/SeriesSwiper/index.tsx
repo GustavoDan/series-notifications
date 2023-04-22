@@ -1,4 +1,4 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Card, Flex, Heading, Spinner, Text } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Mousewheel, Navigation } from "swiper";
 import { useTranslation } from "next-i18next";
@@ -35,6 +35,7 @@ export function SeriesSwiper({ title }: SeriesSwiperProps) {
 
     const [series, setSeries] = useState<Series[]>([]);
     const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(true);
 
     const listingParam = title
         .toLowerCase()
@@ -50,6 +51,7 @@ export function SeriesSwiper({ title }: SeriesSwiperProps) {
     };
 
     const getSeriesList = async () => {
+        setLoading(true);
         try {
             const res = await axios.get(
                 `/api/list/series/${listingParam}?language=${
@@ -63,6 +65,8 @@ export function SeriesSwiper({ title }: SeriesSwiperProps) {
             setPage(page + 1);
         } catch (error: any) {
             console.log(`SeriesSwiper.getSeriesList error ${error.message}`);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -89,6 +93,27 @@ export function SeriesSwiper({ title }: SeriesSwiperProps) {
                     );
                 })}
             </Swiper>
+
+            {(loading || series.length === 0) && (
+                <Card
+                    bg="gray.700"
+                    color="gray.100"
+                    alignItems="center"
+                    justifyContent="center"
+                    width="100%"
+                    height="377px"
+                    userSelect="none"
+                    onClick={getSeriesList}
+                >
+                    {loading ? (
+                        <Spinner />
+                    ) : (
+                        <Text whiteSpace="pre-line" textAlign="center">
+                            {t("no_series_loaded")}
+                        </Text>
+                    )}
+                </Card>
+            )}
         </Flex>
     );
 }
